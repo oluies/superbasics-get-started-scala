@@ -10,11 +10,21 @@ Some basic excercises to get started
 ## Windows
 Download and install git: https://git-scm.com/download/win
 
-Install java: http://download.oracle.com/otn-pub/java/jdk/8u74-b02/jdk-8u74-windows-x64.exe
+Install java: 
+```
+http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+```
+Choose and download the latest jdk for windows, in the time of writing:
+```
+jdk-8u74-windows-x64.exe
+```
+
 
 Clone repo
 
-```git clone https://github.com/jesperoman/superbasics-get-started-scala.git```
+```
+git clone https://github.com/jesperoman/superbasics-get-started-scala.git
+```
 
 Run sbt:
 ```
