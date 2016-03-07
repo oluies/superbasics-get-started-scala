@@ -5,51 +5,45 @@ import org.scalatest.{Matchers, WordSpec}
 class PhoneBookSpec extends WordSpec with Matchers {
   "tutorial.PhoneBook" should {
     "add contact" in {
-      val pb = PhoneBook()
-      pb.contacts shouldBe List()
-      val nisse = Contact("Nisse")
-      val withNisse = pb.add(nisse)
-      withNisse.contacts shouldBe List(nisse)
+      emptyBook.contacts shouldBe List()
+      val dude = Contact("Some dude", "", "")
+      val withNisse = emptyBook.add(dude)
+      withNisse.contacts shouldBe List(dude)
     }
 
     "Sort by name" in {
-      val pb = PhoneBook()
-        .add(Contact("Adam", "08123457", "Storgatan 2"))
-        .add(Contact("Bertil", "08123456", "Storgatan 1"))
-
-      pb.contacts.head.name shouldBe "Bertil"
-      val sorted = pb.byName
-      sorted.head.name shouldBe "Adam"
+      fullBook.contacts.head.name shouldBe "Chip Munk"
+      val sorted = fullBook.byName
+      sorted.head.name shouldBe "Anna Conda"
     }
 
     "Remove contact" in {
-      val pb = PhoneBook(List(Contact("nisse"), Contact("kalle")))
-      pb shouldBe PhoneBook(List(Contact("nisse"), Contact("kalle")))
-      val noNisse = pb.remove("nisse")
-      noNisse.contacts shouldBe List(Contact("kalle"))
+      val noNisse = fullBook.remove("Ferris Wheeler")
+      noNisse.contacts shouldNot contain(Contact("Ferris Wheeler", "08123456", "1 Main street"))
     }
 
     "Search contacts" in {
-      val pb = PhoneBook(List(
-        Contact("Kalle"),
-        Contact("Nisse Nilsson"),
-        Contact("Bosse")
-      ))
-      pb.search("Nisse") shouldBe List(Contact("Nisse Nilsson"))
+      fullBook.search("Armand") shouldBe List(Contact("Harry Armand Bach", "08123456", "1 Main street"))
     }
 
     "get multiple contacts in search result" in {
-      val pb = PhoneBook(List(
-        Contact("Nils Bengtsson"),
-        Contact("Kalle Karlsson"),
-        Contact("Johan Nilsson"),
-        Contact("Nils Johansson")
-      ))
-      pb.search("Nils") shouldBe List(
-        Contact("Nils Bengtsson"),
-        Contact("Johan Nilsson"),
-        Contact("Nils Johansson")
+      fullBook.search("Anna") shouldBe List(
+        Contact("Anna Conda", "08123456", "1 Main street"),
+        Contact("Anna Fender", "08123456", "1 Main street")
       )
     }
   }
+
+  lazy val emptyBook = PhoneBook(List(), "Empty")
+  lazy val contacts = List(
+    Contact("Chip Munk", "08123456", "1 Main street"),
+    Contact("Earl E. Bird", "08123456", "1 Main street"),
+    Contact("Ferris Wheeler", "08123456", "1 Main street"),
+    Contact("Harry Armand Bach", "08123456", "1 Main street"),
+    Contact("Anna Conda", "08123456", "1 Main street"),
+    Contact("Anna Fender", "08123456", "1 Main street"),
+    Contact("Brad Hammer ", "08123456", "1 Main street")
+  )
+  lazy val fullBook = PhoneBook(contacts, "Full")
 }
+

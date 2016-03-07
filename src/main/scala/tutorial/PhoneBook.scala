@@ -1,8 +1,8 @@
 package tutorial
 
-case class Contact(name: String, phone: String = "", address: String = "")
+case class Contact(name: String, phone: String, address: String)
 
-case class PhoneBook(val contacts: List[Contact] = List(), val name: String = "New phone book") {
+case class PhoneBook(contacts: List[Contact], name: String) {
   def search(name: String): List[Contact] = ???
 
   def byName: List[Contact] = ???
@@ -10,4 +10,5 @@ case class PhoneBook(val contacts: List[Contact] = List(), val name: String = "N
   def add(contact: Contact): PhoneBook = ???
 
   def remove(name: String): PhoneBook = ???
+
 }
