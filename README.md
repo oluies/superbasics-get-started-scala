@@ -11,9 +11,9 @@ Some basic excercises to get started
 Download and install git: https://git-scm.com/download/win
 
 Install java: 
-```
+
 http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
-```
+
 Choose and download the latest jdk for windows, in the time of writing:
 ```
 jdk-8u74-windows-x64.exe
