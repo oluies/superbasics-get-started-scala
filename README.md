@@ -9,7 +9,7 @@ Some basic excercises to get started
 [guide.md](guide.md)
 
 # TLDR;
-Install git and java jdk 8, clone this project and continue to [SBT](#SBT)
+Install git and java jdk 8, clone this project and continue to [SBT](#sbt)
 
 # Installation
 
