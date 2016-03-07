@@ -17,8 +17,9 @@ Clone repo
 ```git clone https://github.com/jesperoman/superbasics-get-started-scala.git```
 
 Run sbt:
-
-```sbt```
+```
+sbt
+```
 
 ## Mac OSX
 
