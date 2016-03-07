@@ -5,6 +5,9 @@ Some basic excercises to get started
 - Git for getting the tutorial project
 - Java JDK 8 to build and run
 
+# Beginners guide to scala
+[guide.md](guide.md)
+
 # Installation
 
 ## Windows
