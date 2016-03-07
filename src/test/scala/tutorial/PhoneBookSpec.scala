@@ -51,16 +51,28 @@ class PhoneBookSpec extends WordSpec with Matchers {
       (fullBook ++ otherBook).contacts shouldBe expected
     }
     "Excercise 6: Return the first matching contact" in {
-      fullBook.findByName("Anna Conda") shouldBe Contact("Anna Conda", "08123456", "1 Main street")
+      fullBook.findByName("Anna Conda") shouldBe Some(Contact("Anna Conda", "08123456", "1 Main street"))
+    }
+    "Excercise 6: Return None if no match" in {
+      fullBook.findByName("Kalle Kula") shouldBe None
     }
     "Excercise 7: Return first matching by number" in {
-      fullBook.findByNumber("087342342") shouldBe Contact("Harry Armand Bach", "087342342", "1 Main street")
+      fullBook.findByNumber("087342342") shouldBe Some(Contact("Harry Armand Bach", "087342342", "1 Main street"))
     }
-    "Excercise 8: " in {
+    "Excercise 7: Return None if no match" in {
+      fullBook.findByNumber("234898791hj2k3") shouldBe None
+    }
+    "Excercise 8: Find number by name" in {
       otherBook.findNr("Will Power") shouldBe "555-1223"
     }
-    "Excercise 9: " in {
+    "Excercise 8: Return \"Not found\" if not found" in {
+      otherBook.findNr("Världens bästa Karlsson") shouldBe "Not found"
+    }
+    "Excercise 9: Find name by number" in {
       fullBook.findName("087342342") shouldBe "Harry Armand Bach"
+    }
+    "Excercise 9: Find name by number should return \"No contact\" if not found" in {
+      fullBook.findName("051") shouldBe "No contact"
     }
   }
 

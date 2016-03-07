@@ -48,24 +48,27 @@ case class PhoneBook(contacts: List[Contact], name: String) {
 
   /**
     * Excercise 6
-    * Return the first Contact matching the name supplied
+    * Return the first Contact found,
+    * if no one is found, return None
     * @param name
     * @return
     */
-  def findByName(name: String): Contact = ???
+  def findByName(name: String): Option[Contact] = ???
 
   /**
     * Excercise 7
     * Return the first Contact matching the number
+    * If no one is found, return None
     * @param number
     * @return
     */
-  def findByNumber(number: String): Contact = ???
+  def findByNumber(number: String): Option[Contact] = ???
 
   /**
     * Excercise 8
     * Return the number of the first contact whos name is matching supplied
     * string
+    * Return "Not found" if not found
     * @param name
     * @return
     */
@@ -75,6 +78,7 @@ case class PhoneBook(contacts: List[Contact], name: String) {
     * Excercise 9
     * Return the name of the first contact who's number is matching
     * supplied string
+    * Return "No contact" if not found
     * @param number
     * @return
     */
