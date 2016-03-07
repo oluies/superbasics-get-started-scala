@@ -100,4 +100,20 @@ Choose and download the latest jdk for Linux, at the time of writing:
 jdk-8u74-linux-x64.tar.gz
 ```
 
-(#SBT) 
+# SBT 
+
+Open a terminal window and navigate to the root of the project you cloned from github
+
+Launch sbt:
+
+```
+./sbt
+```
+
+Run tests:
+
+```
+test
+```
+
+All tests should fail, your assignment is to make them pass!
