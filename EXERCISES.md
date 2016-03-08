@@ -7,9 +7,9 @@ Start sbt with the command ~test:
 ```sbt ~test```
 
 The ```PhoneBook``` has 9 unimplemented methods, each is it's own assignment
-and can be solved independently from the others.
+and can be solved independently from the others (Even though some methods can use others).
  
-```~``` in the sbt command makes sbt sense each time you save the source code,
+```~``` in the sbt command makes sbt detect each time you save the source code,
 recompile and rerun the tests.
 
 In the tests output, each test will turn green as you complete the exercises
