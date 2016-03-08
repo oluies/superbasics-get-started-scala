@@ -60,7 +60,7 @@ test
 ```
 
 Output should look something like this:
-```sbt
+```
 [info] Loading global plugins from /Users/jesper/.sbt/0.13/plugins
 [info] Loading project definition from /Users/jesper/dev/contacts/project
 [info] Set current project to Contacts (in build file:/Users/jesper/dev/contacts/)
