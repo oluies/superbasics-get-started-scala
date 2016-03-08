@@ -2,7 +2,7 @@ package tutorial
 
 import org.scalatest._
 
-class PhoneBookSpec extends WordSpec with Matchers {
+class PhoneBookSpec extends WordSpec with Matchers with PendingIfUnimplemented {
   "tutorial.PhoneBook" should {
     "Exercise 1: add contact" in {
       emptyBook.contacts shouldBe List()
@@ -97,3 +97,12 @@ class PhoneBookSpec extends WordSpec with Matchers {
   lazy val otherBook = PhoneBook(other, "Other")
 }
 
+trait PendingIfUnimplemented extends SuiteMixin { this: Suite =>
+
+  abstract override def withFixture(test: NoArgTest): Outcome = {
+    super.withFixture(test) match {
+      case Failed(ex: NotImplementedError) => Pending
+      case other => other
+    }
+  }
+}
