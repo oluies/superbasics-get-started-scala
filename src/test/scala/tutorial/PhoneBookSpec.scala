@@ -1,39 +1,39 @@
 package tutorial
 
-import org.scalatest.{Matchers, WordSpec}
+import org.scalatest._
 
 class PhoneBookSpec extends WordSpec with Matchers {
   "tutorial.PhoneBook" should {
-    "Excercise 1: add contact" in {
+    "Exercise 1: add contact" in {
       emptyBook.contacts shouldBe List()
       val dude = Contact("Some dude", "", "")
-      val withNisse = emptyBook + dude
+      val withNisse = emptyBook.add(dude)
       withNisse.contacts shouldBe List(dude)
     }
 
-    "Excercise 2: Sort by name" in {
+    "Exercise 2: Sort by name" in {
       fullBook.contacts.head.name shouldBe "Chip Munk"
       val sorted = fullBook.sortByName
       sorted.head.name shouldBe "Anna Conda"
     }
 
-    "Excercise 3: Remove contact" in {
-      val noNisse = fullBook - "Ferris Wheeler"
-      noNisse.contacts shouldNot contain(Contact("Ferris Wheeler", "08123456", "1 Main street"))
+    "Exercise 3: Remove contact" in {
+      val noFerris = fullBook.delete("Ferris Wheeler")
+      noFerris.contacts shouldNot contain(Contact("Ferris Wheeler", "08123456", "1 Main street"))
     }
 
-    "Excercise 4: Search contacts" in {
+    "Exercise 4: Search contacts" in {
       fullBook.search("Armand") shouldBe List(Contact("Harry Armand Bach", "08123456", "1 Main street"))
     }
 
-    "Excercise 4: get multiple contacts in search result" in {
+    "Exercise 4: get multiple contacts in search result" in {
       fullBook.search("Anna") shouldBe List(
         Contact("Anna Conda", "08123456", "1 Main street"),
         Contact("Anna Fender", "08123456", "1 Main street")
       )
     }
 
-    "Excercise 5: concat 2 phonebooks" in {
+    "Exercise 5: concat 2 phonebooks" in {
       val expected = List(
         Contact("Chip Munk", "08123456", "1 Main street"),
         Contact("Earl E. Bird", "08123456", "1 Main street"),
@@ -48,30 +48,30 @@ class PhoneBookSpec extends WordSpec with Matchers {
         Contact("Will Power", "555-1223", "45 Hudson"),
         Contact("Iona Ford", "555-1223", "45 Hudson")
       )
-      (fullBook ++ otherBook).contacts shouldBe expected
+      fullBook.concat(otherBook).contacts shouldBe expected
     }
-    "Excercise 6: Return the first matching contact" in {
+    "Exercise 6: Return the first matching contact" in {
       fullBook.findByName("Anna Conda") shouldBe Some(Contact("Anna Conda", "08123456", "1 Main street"))
     }
-    "Excercise 6: Return None if no match" in {
+    "Exercise 6: Return None if no match" in {
       fullBook.findByName("Kalle Kula") shouldBe None
     }
-    "Excercise 7: Return first matching by number" in {
+    "Exercise 7: Return first matching by number" in {
       fullBook.findByNumber("087342342") shouldBe Some(Contact("Harry Armand Bach", "087342342", "1 Main street"))
     }
-    "Excercise 7: Return None if no match" in {
+    "Exercise 7: Return None if no match" in {
       fullBook.findByNumber("234898791hj2k3") shouldBe None
     }
-    "Excercise 8: Find number by name" in {
+    "Exercise 8: Find number by name" in {
       otherBook.findNr("Will Power") shouldBe "555-1223"
     }
-    "Excercise 8: Return \"Not found\" if not found" in {
+    "Exercise 8: Return \"Not found\" if not found" in {
       otherBook.findNr("Världens bästa Karlsson") shouldBe "Not found"
     }
-    "Excercise 9: Find name by number" in {
+    "Exercise 9: Find name by number" in {
       fullBook.findName("087342342") shouldBe "Harry Armand Bach"
     }
-    "Excercise 9: Find name by number should return \"No contact\" if not found" in {
+    "Exercise 9: Find name by number should return \"No contact\" if not found" in {
       fullBook.findName("051") shouldBe "No contact"
     }
   }

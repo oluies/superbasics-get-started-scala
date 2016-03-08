@@ -118,4 +118,4 @@ test
 
 All tests should fail, your assignment is to make them pass!
 
-Continue to the [excercises](EXCERCISES.md)
+Continue to the [exercises](EXERCISES.md)
