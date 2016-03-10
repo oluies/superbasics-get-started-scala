@@ -116,6 +116,9 @@ You can also use the Intellij IDEA which support scala and sbt projects out of t
 The CE version is available as a free download: https://www.jetbrains.com/idea/download/
 Just choose "open project" and point to the cloned git repo
 
+## Others
+Of course, any text editor will work, VIM, Emacs, Nano, Ed, Notepad, Atom, Sublime, etc.
+
 # Finally
 Now you're prepared for the meetup, congratulations!
 
