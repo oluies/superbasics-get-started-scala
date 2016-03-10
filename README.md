@@ -97,4 +97,20 @@ Output should look something like this:
 
 All tests should be marked "pending", your assignment is to make them pass!
 
+# IDE (Optional)
+Some people like using an IDE for programming
+
+There is a "official" Scala IDE built on eclipse: http://scala-ide.org/
+
+Install it, and type "eclipse" in the sbt prompt to create the necessary eclipse project files
+
+Import in eclipse with:
+*File > Import > General/Existing Project into Workspace*
+
+Choose the root of the cloned git repo, choose "Contacts" and click Finish
+
+You can also use the Intellij IDEA which support scala and sbt projects out of the box
+The CE version is available as a free download: https://www.jetbrains.com/idea/download/
+Just choose "open project" and point to the cloned git repo
+
 Continue to the [exercises](EXERCISES.md)
