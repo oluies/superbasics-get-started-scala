@@ -76,10 +76,12 @@ The same goes for any of the advanced stuff - macros, higher kinded types etc. b
   * [Scala for the impatient](http://www.horstmann.com/scala/index.html) - from the eyes of a Java dev (dated and focuses on a bit weird things)
   * [Programming in Scala](http://www.artima.com/shop/programming_in_scala_2ed) - Martins Scala book - (dated but very thorough)
 * Online
+  * [Scaladocs](http://www.scala-lang.org/api/2.11.8/#package) 
   * [Scala for Java Programmers](http://docs.scala-lang.org/tutorials/scala-for-java-programmers.html)  
   * [scala-lang.org tutorials](http://docs.scala-lang.org/tutorials/)
   * [Twitter Scala School](https://twitter.github.io/scala_school/)
   * [Big Data University](http://bigdatauniversity.com/courses/scala-course/) - Scala introduction in the form of short videos - requires signup but is free
+  * [Coursera - Functional Programming Principles in Scala](https://www.coursera.org/course/progfun) - bi-annual, next time: September
 * Style guides
   * [scala-lang.org](http://docs.scala-lang.org/style/)
   * [Twitter](https://twitter.github.io/effectivescala/) 
