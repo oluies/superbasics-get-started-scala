@@ -1,12 +1,13 @@
 # The superbasics to get started with Scala
-Some basic excercises to get started
+This is some simple exercises for the scala meetup in Stockholm on Mars 15.
+
+Please follow the installation instructions prior to joining the meetup,
+it involves some downloading of stuff, so it would be very crowded on
+the network if everyone try to do this at the venue.
 
 # Prerequisites
 - Git for getting the tutorial project
 - Java JDK 8 to build and run
-
-# Beginners guide to scala
-[guide.md](guide.md)
 
 # TLDR;
 Install git and java jdk 8, clone this project and continue to [SBT](#sbt)
@@ -100,6 +101,7 @@ All tests should be marked "pending", your assignment is to make them pass!
 # IDE (Optional)
 Some people like using an IDE for programming
 
+## Scala IDE
 There is a "official" Scala IDE built on eclipse: http://scala-ide.org/
 
 Install it, and type "eclipse" in the sbt prompt to create the necessary eclipse project files
@@ -109,8 +111,16 @@ Import in eclipse with:
 
 Choose the root of the cloned git repo, choose "Contacts" and click Finish
 
+## Intellij IDEA
 You can also use the Intellij IDEA which support scala and sbt projects out of the box
 The CE version is available as a free download: https://www.jetbrains.com/idea/download/
 Just choose "open project" and point to the cloned git repo
 
+# Finally
+Now you're prepared for the meetup, congratulations!
+
+# Beginners guide to scala
+[guide.md](guide.md)
+
+# Further
 Continue to the [exercises](EXERCISES.md)
