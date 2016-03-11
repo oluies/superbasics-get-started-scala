@@ -1,5 +1,5 @@
 # The superbasics to get started with Scala
-This is some simple exercises for the scala meetup in Stockholm on Mars 15.
+This project contains some simple exercises for the scala meetup in Stockholm on Mars 15.
 
 Please follow the installation instructions prior to joining the meetup,
 it involves some downloading of stuff, so it would be very crowded on
@@ -102,9 +102,9 @@ All tests should be marked "pending", your assignment is to make them pass!
 Some people like using an IDE for programming
 
 ## Scala IDE
-There is a "official" Scala IDE built on eclipse: http://scala-ide.org/
+There is an "official" Scala IDE built on eclipse: http://scala-ide.org/
 
-Install it, and type "eclipse" in the sbt prompt to create the necessary eclipse project files
+Install it and type "eclipse" in the sbt prompt to create the necessary eclipse project files
 
 Import in eclipse with:
 *File > Import > General/Existing Project into Workspace*
@@ -112,7 +112,7 @@ Import in eclipse with:
 Choose the root of the cloned git repo, choose "Contacts" and click Finish
 
 ## Intellij IDEA
-You can also use the Intellij IDEA which support scala and sbt projects out of the box
+You can also use the Intellij IDEA which support scala and sbt projects out of the box.
 The CE version is available as a free download: https://www.jetbrains.com/idea/download/
 Just choose "open project" and point to the cloned git repo
 
