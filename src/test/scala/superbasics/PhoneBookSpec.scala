@@ -1,4 +1,4 @@
-package tutorial
+package superbasics
 
 import org.scalatest._
 

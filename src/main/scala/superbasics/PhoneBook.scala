@@ -1,4 +1,4 @@
-package tutorial
+package superbasics
 
 case class Contact(name: String, phone: String, address: String)
 
@@ -83,4 +83,20 @@ case class PhoneBook(contacts: List[Contact], name: String) {
     * @return
     */
   def findName(number: String): String = ???
+  
+  
+  /**
+   * What to do when you're finished?
+   * 
+   * Why not try out some more stuff?
+   * 
+   * Add fields to contacts, description, email, etc.
+   * 
+   * Maybe make it possible to have multiple phone numbers per contact?
+   * 
+   * You could create a runnable app with a command line interface to make it more useful?
+   * 
+   * Of course, write unit tests for your new features!
+   * 
+   */
 }
