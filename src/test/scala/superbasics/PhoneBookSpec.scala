@@ -3,7 +3,7 @@ package superbasics
 import org.scalatest._
 
 class PhoneBookSpec extends WordSpec with Matchers with PendingIfUnimplemented {
-  "tutorial.PhoneBook" should {
+  "The PhoneBook" should {
     "Exercise 1: add contact" in {
       emptyBook.contacts shouldBe List()
       val dude = Contact("Some dude", "", "")
@@ -23,7 +23,7 @@ class PhoneBookSpec extends WordSpec with Matchers with PendingIfUnimplemented {
     }
 
     "Exercise 4: Search contacts" in {
-      fullBook.search("Armand") shouldBe List(Contact("Harry Armand Bach", "08123456", "1 Main street"))
+      fullBook.search("Armand") shouldBe List(contacts(3))
     }
 
     "Exercise 4: get multiple contacts in search result" in {
@@ -34,21 +34,7 @@ class PhoneBookSpec extends WordSpec with Matchers with PendingIfUnimplemented {
     }
 
     "Exercise 5: concat 2 phonebooks" in {
-      val expected = List(
-        Contact("Chip Munk", "08123456", "1 Main street"),
-        Contact("Earl E. Bird", "08123456", "1 Main street"),
-        Contact("Ferris Wheeler", "08123456", "1 Main street"),
-        Contact("Harry Armand Bach", "087342342", "1 Main street"),
-        Contact("Anna Conda", "08123456", "1 Main street"),
-        Contact("Anna Fender", "08123456", "1 Main street"),
-        Contact("Brad Hammer ", "08123456", "1 Main street"),
-        Contact("Morey Bund", "555-1223", "45 Hudson"),
-        Contact("Ray Gunn", "555-1223", "45 Hudson"),
-        Contact("Russell Sprout", "555-1223", "45 Hudson"),
-        Contact("Will Power", "555-1223", "45 Hudson"),
-        Contact("Iona Ford", "555-1223", "45 Hudson")
-      )
-      fullBook.concat(otherBook).contacts shouldBe expected
+      fullBook.concat(otherBook).contacts shouldBe allContacts
     }
     "Exercise 6: Return the first matching contact" in {
       fullBook.findByName("Anna Conda") shouldBe Some(Contact("Anna Conda", "08123456", "1 Main street"))
@@ -86,7 +72,9 @@ class PhoneBookSpec extends WordSpec with Matchers with PendingIfUnimplemented {
     Contact("Anna Fender", "08123456", "1 Main street"),
     Contact("Brad Hammer ", "08123456", "1 Main street")
   )
+
   lazy val fullBook = PhoneBook(contacts, "Full")
+
   lazy val other = List(
     Contact("Morey Bund", "555-1223", "45 Hudson"),
     Contact("Ray Gunn", "555-1223", "45 Hudson"),
@@ -95,6 +83,9 @@ class PhoneBookSpec extends WordSpec with Matchers with PendingIfUnimplemented {
     Contact("Iona Ford", "555-1223", "45 Hudson")
   )
   lazy val otherBook = PhoneBook(other, "Other")
+
+  lazy val allContacts = contacts ++ other
+  lazy val allPhoneBook = PhoneBook(allContacts, "All contacts")
 }
 
 trait PendingIfUnimplemented extends SuiteMixin { this: Suite =>
