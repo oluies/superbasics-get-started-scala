@@ -105,6 +105,23 @@ Some people like using an IDE for programming
 There is an "official" Scala IDE built on eclipse: http://scala-ide.org/
 
 Install it and type "eclipse" in the sbt prompt to create the necessary eclipse project files
+```
+$ ./sbt
+[info] Loading global plugins from /Users/jesper/.sbt/0.13/plugins
+[info] Updating {file:/Users/jesper/.sbt/0.13/plugins/}global-plugins...
+[info] Resolving org.fusesource.jansi#jansi;1.4 ...
+[info] Done updating.
+[info] Loading project definition from /Users/jesper/dev/superbasics-get-started-scala/project
+[info] Updating {file:/Users/jesper/dev/superbasics-get-started-scala/project/}superbasics-get-started-scala-build...
+[info] Resolving org.fusesource.jansi#jansi;1.4 ...
+[info] Done updating.
+[info] Set current project to Contacts (in build file:/Users/jesper/dev/superbasics-get-started-scala/)
+> eclipse
+[info] About to create Eclipse project files for your project(s).
+[info] Successfully created Eclipse project files for project(s):
+[info] Contacts
+>
+```
 
 Import in eclipse with:
 *File > Import > General/Existing Project into Workspace*
