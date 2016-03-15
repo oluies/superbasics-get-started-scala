@@ -75,6 +75,7 @@ The same goes for any of the advanced stuff - macros, higher kinded types etc. b
   * [Atomic Scala](http://www.atomicscala.com) (really good except for the setup part, which is a bit messy, can be skipped after this workshop!) 
   * [Scala for the impatient](http://www.horstmann.com/scala/index.html) - from the eyes of a Java dev (dated and focuses on a bit weird things)
   * [Programming in Scala](http://www.artima.com/shop/programming_in_scala_2ed) - Martins Scala book - (dated but very thorough)
+  * [List of more books](http://www.scala-lang.org/documentation/books.html)
 * Online
   * [Scaladocs](http://www.scala-lang.org/api/2.11.8/#package) 
   * [Scala for Java Programmers](http://docs.scala-lang.org/tutorials/scala-for-java-programmers.html)  
