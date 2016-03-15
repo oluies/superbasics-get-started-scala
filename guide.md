@@ -5,9 +5,9 @@
 * using SBT/maven - no need to install, the compiler and standard library is just another jar dependency of your build
 
 ## Compiling/building/running
-* scalac - compiler, can be used manually, outputs .class-files that can be run on the JVM
-* scala - interactive scala shell (REPL - Read Eval Print Loop)
-* SBT - _the_ Scala build tool (what we will be using)
+* `scalac` - compiler, can be used manually, outputs .class-files that can be run on the JVM
+* `scala` - interactive scala shell (REPL - Read Eval Print Loop)
+* [SBT](http://www.scala-sbt.org) - _the_ Scala build tool (what we will be using)
 * Possible alternatives
   * Maven - [scala-maven-plugin](http://davidb.github.io/scala-maven-plugin/)
   * Gradle - [Scala plugin](https://docs.gradle.org/current/userguide/scala_plugin.html)
